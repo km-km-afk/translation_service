@@ -1,8 +1,8 @@
-Translation Microservice
+##Translation Microservice
 
 A lightweight, modular, and scalable RESTful translation service built with FastAPI. Supports single & bulk translation with validation, logging, and error handling.
 
-🚀 Features
+##🚀 Features
 
 RESTful API with FastAPI
 
@@ -20,7 +20,7 @@ Mock Translation (replaceable with Google Translate API)
 
 Test Suite included
 
-📁 Project Structure
+##📁 Project Structure
 translation-service/
 ├── main.py           # FastAPI app entry
 ├── models.py         # Pydantic models
