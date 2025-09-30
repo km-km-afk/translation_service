@@ -1,8 +1,8 @@
-##Translation Microservice
+## Translation Microservice
 
 A lightweight, modular, and scalable RESTful translation service built with FastAPI. Supports single & bulk translation with validation, logging, and error handling.
 
-##🚀 Features
+## 🚀 Features
 
 RESTful API with FastAPI
 
@@ -20,7 +20,7 @@ Mock Translation (replaceable with Google Translate API)
 
 Test Suite included
 
-##📁 Project Structure
+## 📁 Project Structure
 translation-service/
 ├── main.py           # FastAPI app entry
 ├── models.py         # Pydantic models
@@ -30,11 +30,11 @@ translation-service/
 ├── utils/            # Validators
 └── tests/            # Unit tests
 
-🛠 Installation
+## 🛠 Installation
 pip install -r requirements.txt
 cp .env.example .env   # Fill with real values
 
-🚀 Running
+## 🚀 Running
 
 Dev:
 
@@ -45,7 +45,7 @@ Prod:
 
 uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 
-🔌 API Endpoints
+## 🔌 API Endpoints
 
 Health: GET /health
 
@@ -57,19 +57,19 @@ Logs & Stats: GET /api/v1/logs, GET /api/v1/logs/stats
 
 Supported Languages: GET /api/v1/languages
 
-🧪 Testing
+## 🧪 Testing
 pytest tests/ -v
 pytest tests/ --cov=. --cov-report=html
 
-🔧 Configuration
+## 🔧 Configuration
 
 Switch to Google Translate by setting .env USE_GOOGLE_API=true and adding GOOGLE_API_KEY.
 
-🗄️ Database
+## 🗄️ Database
 
 SQLite table translations stores logs with timestamps, character counts, and request info.
 
-🏗 Architecture
+## 🏗 Architecture
 
 Modular Design: Separation of concerns, single responsibility, dependency injection
 
@@ -77,7 +77,7 @@ Scalable: Async support, stateless, horizontal scaling
 
 Maintainable: Type hints, Pydantic validation, logging, unit tests
 
-🔒 Security & Performance
+## 🔒 Security & Performance
 
 Input validation & sanitization
 
