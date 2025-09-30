@@ -87,6 +87,6 @@ CORS configuration
 
 Optional caching, rate limiting, async database
 
-🤝 Contributing
+## 🤝 Contributing
 
 MIT License — clean, maintainable code suitable for larger projects.
