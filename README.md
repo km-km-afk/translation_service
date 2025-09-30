@@ -1,10 +1,10 @@
 Translation Microservice
 
-Lightweight, modular, and scalable FastAPI-based RESTful translation service. Supports single & bulk translation with validation, logging, and error handling.
+A lightweight, modular, and scalable RESTful translation service built with FastAPI. Supports single & bulk translation with validation, logging, and error handling.
 
-Features
+🚀 Features
 
-RESTful API using FastAPI
+RESTful API with FastAPI
 
 Single & Bulk Translation
 
@@ -14,13 +14,13 @@ Error Handling & Logging (SQLite)
 
 Health Check & Statistics
 
-Modular & Maintainable Design
+Modular & Maintainable Architecture
 
-Mock Translation (replacable with Google Translate API)
+Mock Translation (replaceable with Google Translate API)
 
 Test Suite included
 
-Project Structure
+📁 Project Structure
 translation-service/
 ├── main.py           # FastAPI app entry
 ├── models.py         # Pydantic models
@@ -28,23 +28,24 @@ translation-service/
 ├── requirements.txt  # Dependencies
 ├── services/         # Translation & logging logic
 ├── utils/            # Validators
-└── tests/          # Unit tests
+└── tests/            # Unit tests
 
-???? Installation
+🛠 Installation
 pip install -r requirements.txt
-cp .env.example .env   # Replace with actual values
+cp .env.example .env   # Fill with real values
 
-???? Running
+🚀 Running
 
 Dev:
 
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
+
 Prod:
 
 uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 
-API Endpoints
+🔌 API Endpoints
 
 Health: GET /health
 
@@ -56,19 +57,19 @@ Logs & Stats: GET /api/v1/logs, GET /api/v1/logs/stats
 
 Supported Languages: GET /api/v1/languages
 
-Testing
+🧪 Testing
 pytest tests/ -v
 pytest tests/ --cov=. --cov-report=html
 
-Configuration
+🔧 Configuration
 
 Switch to Google Translate by setting .env USE_GOOGLE_API=true and adding GOOGLE_API_KEY.
 
-Database
+🗄️ Database
 
-SQLite table translations stores logs with timestamps, character counts, and request information.
+SQLite table translations stores logs with timestamps, character counts, and request info.
 
-Architecture
+🏗 Architecture
 
 Modular Design: Separation of concerns, single responsibility, dependency injection
 
@@ -76,7 +77,15 @@ Scalable: Async support, stateless, horizontal scaling
 
 Maintainable: Type hints, Pydantic validation, logging, unit tests
 
-Security & Performance
+🚀 Deployment (Docker)
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+🔒 Security & Performance
 
 Input validation & sanitization
 
@@ -86,6 +95,6 @@ CORS configuration
 
 Optional caching, rate limiting, async database
 
-Contributing
+🤝 Contributing
 
 MIT License — clean, maintainable code suitable for larger projects.
