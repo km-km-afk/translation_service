@@ -1,4 +1,3 @@
-# models.py
 '''Purpose: Defines the structure of requests and responses using Pydantic
 What it does:
 
